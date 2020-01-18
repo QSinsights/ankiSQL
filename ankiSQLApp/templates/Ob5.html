@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+  </head>
+  <body>
+    <h1>Intention Theme: the ability to explain the functions of clustered and non-clustered indexes</h1>
+    <table class="table table-hover">
+      <tr>
+        <th><a href="{% url 'Objective1' %}"><h2>Define and explain normalization</h2></a></th>
+        <th><a href="{% url 'Objective2' %}"><h2>Describe the three more common normal forms of normalization</h2></a></th>
+        <th><a href="{% url 'Objective3' %}"><h2>Describe the purpose of keys</h2></a></th>
+        <th><a href="{% url 'Objective4' %}"><h2>Explain the functions of primary and foreign keys</h2></a></th>
+        <th><a href="{% url 'Objective5' %}"><h2>Explain the functions of clustered and non-clustered indexes</h2></a></th>
+      </tr>
+    </table>
+
+    <script type="text/javascript" src="{% static 'main.js' %}"></script>
+  <body>
+    <a href="{% url 'home' %}"><img src="{% static 'Home.JPG' %}" alt=""></a>
+
+    <form class="form-group" action="{% url 'home' %}" method="post">
+      {% csrf_token %}
+      <div class="form-group">
+          <label for="database_loci">Location of Database</label><br>
+          <input type="text" name="database_loci" placeholder="Enter the Location of Database:"><br>
+      </div>
+      <div class="form-group">
+          <label for="domain_theme">Domain of Intention Theme</label><br>
+          <input type="text" name="domain_theme" placeholder="Enter the Domain Address within the Database Location"><br>
+      </div>
+      <div class="form-group">
+          <label for="primary_key">Primary Key</label><br>
+          <input type="text" name="primary_key" placeholder="Enter the attribute that will uniquely identify each row:"><br>
+      </div>
+      <div class="form-group">
+          <label for="first_point_to_remember">1st Key point</label><br>
+          <input type="text" name="first_point_to_remember" placeholder="Enter 1st Key point:"><br>
+      </div>
+      <div class="form-group">
+          <label for="second_point_to_remember">2nd Key point</label><br>
+          <input type="text" name="second_point_to_remember" placeholder="Enter 2nd Key point:"><br>
+      </div>
+      <div class="form-group">
+          <label for="third_point_to_remember">3rd Key point</label><br>
+          <input type="text" name="third_point_to_remember" placeholder="Enter 3rd Key point:"><br>
+      </div>
+      <div class="form-group">
+          <label for="fourth_point_to_remember">4th Key point</label><br>
+          <input type="text" name="fourth_point_to_remember" placeholder="Enter 4th Key point:"><br>
+      </div>
+      <div class="form-group">
+          <label for="fiveth_point_to_remembe">5th Key point</label><br>
+          <input type="text" name="fiveth_point_to_remember" placeholder="Enter 5th Key point:"><br>
+      </div>
+      <div class="form-group">
+          <label for="sixth_point_to_remember">6th Key point</label><br>
+          <input type="text" name="sixth_point_to_remember" placeholder="Enter 6th Key point:"><br>
+      </div>
+      <div class="form-group">
+          <label for="seventh_point_to_remember">7th Key point</label><br>
+          <input type="text" name="seventh_point_to_remember" placeholder="Enter 7th Key point:"><br>
+      </div>
+      <div class="form-group">
+          <label for="eighth_point_to_remember">8th Key point</label><br>
+          <input type="text" name="eighth_point_to_remember" placeholder="Enter 8th Key point:"><br>
+      </div>
+      <input type="submit" class="btn btn-primary" value="Submit"><br>
+      {% if messages %}
+        {% for message in messages %}
+          <h3>{{message}}</h3>
+        {% endfor %}
+      {% endif %}
+
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
